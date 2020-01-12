@@ -1,31 +1,18 @@
 <template>
-  <v-container
-    class="ma-0 pa-0"
-    >
-    <v-list >
-      <v-list-item>
-        {{ this.$options.name }}
-      </v-list-item>
-    </v-list>
     <v-list
-      dark
+      class="ma-0 pa-0"
       nav
       >
       <v-list-item
         v-for="item in items"
         :key="item.title"
-        link
+        @click="item.title"
         >
-        <v-list-item-icon>
-          <v-icon>{{ item.icon }}</v-icon>
-        </v-list-item-icon>
-      <v-list-item-content>
-        <v-list-item-title>{{ item.title }}</v-list-item-title>
-      </v-list-item-content>
-      </v-list-item>
-    </v-list>
-  </v-container>
-
+          <v-list-item-icon>
+            <v-icon>{{ item.icon }}</v-icon>
+          </v-list-item-icon>
+        </v-list-item>
+      </v-list>
 </template>
 
 <script>
@@ -35,10 +22,17 @@ export default {
   data () {
     return {
       items: [
-        { title: 'Dashboard', icon: 'mdi-view-dashboard' },
-        { title: 'Photos', icon: 'mdi-image' },
-        { title: 'About', icon: 'mdi-help-box' },
-        { title: 'Test', icon: 'mdi-help-box' },
+        { title: 'J0', icon: 'mdi-view-dashboard' },
+        { title: 'J1', icon: 'J1' },
+        { title: 'J2', icon: 'J2' },
+        { title: 'J3', icon: 'J3' },
+        { title: 'J4', icon: 'J4' },
+        { title: 'J5', icon: 'J5' },
+        { title: 'J6', icon: 'J6' },
+        { title: 'J7', icon: 'J7' },
+        { title: 'J8', icon: 'J8' },
+        { title: 'J9', icon: 'J9' },
+        { title: 'JE', icon: 'JE' },
       ],
       right: null,
     }

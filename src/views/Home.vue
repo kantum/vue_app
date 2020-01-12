@@ -1,11 +1,6 @@
 <template >
-  <v-container
-    class="ma-0 pa-0 fill-height"
-    fluid
-    >
     <v-row
       class="ma-0 pa-0 fill-height"
-      fluid
       >
       <v-flex
       class="ma-0 pa-0 fill-height blue"
@@ -22,7 +17,6 @@
     <Map/>
   </v-flex>
     </v-row>
-  </v-container>
 </template>
 
 <script>
