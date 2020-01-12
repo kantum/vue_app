@@ -13,7 +13,26 @@ export default {
   },
 
   data: () => ({
-    //
+    j0: null,
+    j1: null,
+    j2: null,
+    j3: null,
+    j4: null,
+    j5: null,
+    j6: null,
+    j7: null,
+    j8: null,
+    j9: null,
+    je: null,
   }),
+
+  created () {
+    this.$vuetify.theme.dark = true
+    //  // Light theme
+    this.$vuetify.theme.themes.light.primary = '#9caf98'
+
+    // Dark theme
+    this.$vuetify.theme.themes.dark.primary = '#4caf50'
+  },
 };
 </script>

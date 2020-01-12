@@ -8,7 +8,6 @@
       </v-list-item>
     </v-list>
     <v-list
-    dark
       nav
       >
       <v-list-item

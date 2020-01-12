@@ -1,22 +1,23 @@
 <template >
+  <v-container
+    fluid
+    class="ma-0 pa-0 fill-height"
+    >
     <v-row
-      class="ma-0 pa-0 fill-height"
+      class="fill-height"
       >
-      <v-flex
-      class="ma-0 pa-0 fill-height blue"
-      >
-        <Menu msg="Welcome to Your Vue.js App"/>
-      </v-flex>
+      <Menu></Menu>
       <v-flex class="red">
-        <SousMenu1 msg="hello"/>
+        <SousMenu1></SousMenu1>
       </v-flex>
-    <v-flex class="purple">
-      <SousMenu2 msg="hello"/>
-    </v-flex>
+  <v-flex class="purple" >
+    <SousMenu2></SousMenu2>
+  </v-flex>
   <v-flex class="green">
-    <Map/>
+    <Map></Map>
   </v-flex>
     </v-row>
+  </v-container>
 </template>
 
 <script>
