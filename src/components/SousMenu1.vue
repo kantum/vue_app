@@ -10,6 +10,9 @@
     <v-list
       nav
       >
+      <v-list-item>
+        <span> current menu: {{ item.menu}}</span>
+      </v-list-item>
       <v-list-item
         v-for="item in items"
         :key="item.title"
@@ -42,5 +45,8 @@ export default {
       right: null,
     }
   },
+  props: {
+    item: Object,
+  }
 };
 </script>

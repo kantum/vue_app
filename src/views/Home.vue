@@ -7,14 +7,14 @@
       class="fill-height"
       no-gutters style="flex-wrap: nowrap;"
       >
-      <Menu></Menu>
-      <v-flex class="flex-grow-0 flex-shrink-1" >
-        <SousMenu1></SousMenu1>
+      <Menu v-on:item-selected="menuItemSelected"></Menu>
+      <v-flex v-if="selectedMenuItem" class="flex-grow-0 flex-shrink-1" >
+        <SousMenu1  :item="selectedMenuItem" ></SousMenu1>
       </v-flex>
-      <v-flex class="flex-grow-0 flex-shrink-1"  >
+      <v-flex v-if="selectedMenuItemSub" class="flex-grow-0 flex-shrink-1"  >
         <SousMenu2></SousMenu2>
       </v-flex>
-      <v-flex class="flex-grow-1 flex-shrink-0" >
+      <v-flex  class="flex-grow-1 flex-shrink-0" >
         <Map></Map>
       </v-flex>
     </v-row>
@@ -35,6 +35,18 @@ export default {
     SousMenu1,
     SousMenu2,
     Map
+  },
+  data () {
+    return {
+      selectedMenuItem: null,
+      selectedMenuItemSub: null,
+      selectedMenuItemSubDetail: null
+    }
+  },
+  methods: {
+    menuItemSelected (item) {
+      this.selectedMenuItem = item
+    }
   }
 }
 </script>

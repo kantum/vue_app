@@ -10,7 +10,7 @@
     <v-list-item
       v-for="item in items"
       :key="item.title"
-      @click="item.menu = !item.menu"
+      @click="selectItem(item)"
       >
       <v-list-item-icon>
         <v-icon>{{ item.icon }}</v-icon>
@@ -55,5 +55,10 @@ export default {
       jE: null,
     }
   },
+  methods: {
+    selectItem (item) {
+      this.$emit("item-selected", item)
+    }
+  }
 };
 </script>
