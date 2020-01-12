@@ -1,12 +1,14 @@
 <template>
-  <v-container fluid>
+  <v-container
+    class="ma-0 pa-0"
+    >
     <v-list >
       <v-list-item>
         {{ this.$options.name }}
       </v-list-item>
     </v-list>
     <v-list
-    dark
+      dark
       nav
       >
       <v-list-item

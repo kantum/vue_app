@@ -1,23 +1,35 @@
-<template>
-  <v-container fluid>
-    <v-row class="fill-height">
-      <v-col class="blue">
+<template >
+  <v-container
+    class="ma-0 pa-0 fill-height"
+    fluid
+    >
+    <v-row
+      class="ma-0 pa-0 fill-height"
+      fluid
+      >
+      <v-flex
+      class="ma-0 pa-0 fill-height blue"
+      >
         <Menu msg="Welcome to Your Vue.js App"/>
-      </v-col>
-      <v-col class="red">
+      </v-flex>
+      <v-flex class="red">
         <SousMenu1 msg="hello"/>
-      </v-col>
-      <v-col class="green">
-        <Map/>
-      </v-col>
+      </v-flex>
+    <v-flex class="purple">
+      <SousMenu2 msg="hello"/>
+    </v-flex>
+  <v-flex class="green">
+    <Map/>
+  </v-flex>
     </v-row>
   </v-container>
 </template>
 
 <script>
 // @ is an alias to /src
-import Menu from '@/components/Menu.vue'
+  import Menu from '@/components/Menu.vue'
 import SousMenu1 from '@/components/SousMenu1.vue'
+import SousMenu2 from '@/components/SousMenu2.vue'
 import Map from '@/components/Map.vue'
 
 export default {
@@ -25,6 +37,7 @@ export default {
   components: {
     Menu,
     SousMenu1,
+    SousMenu2,
     Map
   }
 }

@@ -30,7 +30,7 @@
 
 <script>
 export default {
-  name: 'SousMenu1',
+  name: 'SousMenu2',
 
   data () {
     return {
