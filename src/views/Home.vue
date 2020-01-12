@@ -5,17 +5,18 @@
     >
     <v-row
       class="fill-height"
+      no-gutters style="flex-wrap: nowrap;"
       >
       <Menu></Menu>
-      <v-flex class="red">
+      <v-flex class="flex-grow-0 flex-shrink-1" >
         <SousMenu1></SousMenu1>
       </v-flex>
-  <v-flex class="purple" >
-    <SousMenu2></SousMenu2>
-  </v-flex>
-  <v-flex class="green">
-    <Map></Map>
-  </v-flex>
+      <v-flex class="flex-grow-0 flex-shrink-1"  >
+        <SousMenu2></SousMenu2>
+      </v-flex>
+      <v-flex class="flex-grow-1 flex-shrink-0" >
+        <Map></Map>
+      </v-flex>
     </v-row>
   </v-container>
 </template>
