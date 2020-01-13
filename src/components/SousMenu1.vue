@@ -1,12 +1,9 @@
 <template>
   <v-container class="ma-0 pa-0">
-    <v-list>
-      <v-list-item>{{ this.$options.name }}</v-list-item>
-    </v-list>
+    <v-list-item>
+      <span>{{ item.title }}</span>
+    </v-list-item>
     <v-list nav>
-      <v-list-item>
-        <span>current menu: {{ item.menu}}</span>
-      </v-list-item>
       <v-list-item v-for="item in items" :key="item.title" @click="selectItemSub(item)">
         <v-list-item-icon>
           <v-icon>{{ item.icon }}</v-icon>
@@ -26,10 +23,10 @@ export default {
   data() {
     return {
       items: [
-        { title: "Dashboard", icon: "mdi-view-dashboard" },
-        { title: "Photos", icon: "mdi-image" },
-        { title: "About", icon: "mdi-help-box" },
-        { title: "Test", icon: "mdi-help-box" }
+        { title: "Existants", icon: "mdi-docker" },
+        { title: "Disponibilités", icon: "mdi-help-box" },
+        { title: "Infrastructure", icon: "mdi-home-city" },
+        { title: "Médical", icon: "mdi-doctor" }
       ],
       right: null
     };

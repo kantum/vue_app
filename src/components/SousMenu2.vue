@@ -1,12 +1,9 @@
 <template>
   <v-container class="ma-0 pa-0">
-    <v-list>
-      <v-list-item>{{ this.$options.name }}</v-list-item>
-    </v-list>
+    <v-list-item>
+      <span>{{ item.title }}</span>
+    </v-list-item>
     <v-list nav>
-      <v-list-item>
-        <span>current menu: {{ item }}</span>
-      </v-list-item>
       <v-list-item v-for="item in items" :key="item.title" link>
         <v-list-item-icon>
           <v-icon>{{ item.icon }}</v-icon>
