@@ -28,7 +28,7 @@ export default {
 
   created () {
     this.$vuetify.theme.dark = true
-    //  // Light theme
+    // Light theme
     this.$vuetify.theme.themes.light.primary = '#9caf98'
 
     // Dark theme

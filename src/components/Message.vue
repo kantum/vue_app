@@ -1,15 +1,24 @@
 <template>
-  <v-menu top :offset-y="offset">
+<v-container>
+<div class="text-right">
+  <v-bottom-sheet scrollable max-width="100px" no-click-animation hide-overlay="1" persistent>
     <template v-slot:activator="{ on }">
-      <v-btn color="primary" dark v-on="on">Dropdown</v-btn>
+      <v-btn
+        color="green"
+        dark
+        v-on="on"
+      >
+messages
+      </v-btn>
     </template>
-
-    <v-list>
-      <v-list-item v-for="(item, index) in items" :key="index" @click="on">
-        <v-list-item-title>{{ item.title }}</v-list-item-title>
-      </v-list-item>
-    </v-list>
-  </v-menu>
+      <v-list>
+        <v-list-item v-for="message in messages" :key="message" link>
+          <v-list-item-title v-text=" message.text"></v-list-item-title>
+        </v-list-item>
+      </v-list>
+  </v-bottom-sheet>
+</div>
+</v-container>
 </template>
 
 <script>
@@ -23,14 +32,10 @@ export default {
         { user: "John", text: "Salut John" }
       ],
       items: [
-        { title: "Message 1" },
-        { title: "Message 2" },
-        { title: "Message 3" },
-        { title: "Message 4" },
-        { title: "Message 5" },
-        { title: "Message 6" }
+       { title: "Message 1" },
       ],
-      offset: true
+      offset: true,
+      sheet: false,
     };
   },
   methods: {

@@ -11,14 +11,15 @@
       <v-flex v-if="selectedMenuItemSub" class="flex-grow-0 flex-shrink-1">
         <SousMenu2 :item="selectedMenuItemSub"></SousMenu2>
       </v-flex>
-      <v-flex class="flex-grow-1 flex-shrink-0">
+      <v-flex class="flex-grow-1 flex-shrink-0" no-gutters>
         <Map></Map>
       </v-flex>
     </v-row>
-    <v-row app style="flex-wrap: nowrap;" no-gutters>
-      <v-spacer />
-      <Message></Message>
-    </v-row>
+    <div class="float-right">
+      <v-flex class="flex-grow-1 flex-shrink-0" no-gutters>
+      <Message ></Message>
+    </v-flex>
+    </div>
   </v-container>
 </template>
 
