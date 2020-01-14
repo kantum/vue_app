@@ -1,6 +1,9 @@
 <template >
-  <v-container fluid class="ma-0 pa-0 fill-height">
-    <v-row class="fill-height" no-gutters style="flex-wrap: nowrap;">
+  <v-container fluid class="ma-0 pa-0">
+    <v-row app style="flex-wrap: nowrap;" no-gutters>
+      <h1>hello</h1>
+    </v-row>
+    <v-row app style="flex-wrap: nowrap;" class="fill-height" no-gutters>
       <Menu v-on:item-selected="menuItemSelected"></Menu>
       <v-flex v-if="selectedMenuItem" class="flex-grow-0 flex-shrink-1">
         <SousMenu1 v-on:item-selected-sub="menuItemSelectedSub" :item="selectedMenuItem"></SousMenu1>
@@ -12,6 +15,10 @@
         <Map></Map>
       </v-flex>
     </v-row>
+    <v-row app style="flex-wrap: nowrap;" no-gutters>
+      <v-spacer />
+      <Message></Message>
+    </v-row>
   </v-container>
 </template>
 
@@ -21,6 +28,7 @@ import Menu from "@/components/Menu.vue";
 import SousMenu1 from "@/components/SousMenu1.vue";
 import SousMenu2 from "@/components/SousMenu2.vue";
 import Map from "@/components/Map.vue";
+import Message from "@/components/Message.vue";
 
 export default {
   name: "home",
@@ -28,7 +36,8 @@ export default {
     Menu,
     SousMenu1,
     SousMenu2,
-    Map
+    Map,
+    Message
   },
   data() {
     return {
@@ -39,10 +48,19 @@ export default {
   },
   methods: {
     menuItemSelected(item) {
-      this.selectedMenuItem = item;
+      if (item === this.selectedMenuItem) {
+        this.selectedMenuItem = null;
+        this.selectedMenuItemSub = null;
+      } else {
+        this.selectedMenuItem = item;
+      }
     },
     menuItemSelectedSub(item) {
-      this.selectedMenuItemSub = item;
+      if (item === this.selectedMenuItemSub) {
+        this.selectedMenuItemSub = null;
+      } else {
+        this.selectedMenuItemSub = item;
+      }
     }
   }
 };
