@@ -1,21 +1,33 @@
 <template>
 <v-container>
 <div class="text-right">
-  <v-bottom-sheet scrollable max-width="100px" no-click-animation hide-overlay="1" persistent>
+  <v-bottom-sheet
+  inset max-width="420px"
+  hide-overlay="1"
+  persistent
+  >
     <template v-slot:activator="{ on }">
       <v-btn
         color="green"
-        dark
         v-on="on"
       >
 messages
       </v-btn>
     </template>
+        <v-sheet class="text-right" height="200px">
       <v-list>
         <v-list-item v-for="message in messages" :key="message" link>
           <v-list-item-title v-text=" message.text"></v-list-item-title>
         </v-list-item>
-      </v-list>
+          <v-text-field
+            label="Votre message"
+            solo
+          ></v-text-field>
+        <v-btn>
+          Envoyer
+        </v-btn>
+        </v-list>
+        </v-sheet>
   </v-bottom-sheet>
 </div>
 </v-container>

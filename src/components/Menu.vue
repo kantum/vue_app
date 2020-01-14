@@ -1,7 +1,8 @@
 <template>
   <v-navigation-drawer class="ma-0 pa-0" mini-variant>
-    <v-list class="ma-0 pa-0" nav>
-      <v-list-item v-for="item in items" :key="item.title" @click="selectItem(item)">
+      <v-list-item-group>
+        <v-list class="ma-0 pa-0" nav>
+          <v-list-item v-for="item in items" :key="item.title" @click="selectItem(item)">
         <v-list-item-icon>
           <v-icon>{{ item.icon }}</v-icon>
         </v-list-item-icon>
@@ -10,6 +11,7 @@
         </v-list-item-content>
       </v-list-item>
     </v-list>
+        </v-list-item-group>
   </v-navigation-drawer>
 </template>
 

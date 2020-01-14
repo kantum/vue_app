@@ -1,5 +1,6 @@
 <template>
   <v-container class="ma-0 pa-0">
+      <v-list-item-group>
     <v-list-item>
       <span>{{ item.title }}</span>
     </v-list-item>
@@ -27,6 +28,7 @@
       <br />
       {{ message.text }}
     </v-alert>
+      </v-list-item-group>
   </v-container>
 </template>
 

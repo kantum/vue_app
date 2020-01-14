@@ -1,9 +1,11 @@
 <template >
-  <v-container fluid class="ma-0 pa-0">
-    <v-row app style="flex-wrap: nowrap;" no-gutters>
-      <h1>hello</h1>
+  <v-container fluid fill-height class="ma-0 pa-0">
+    <v-row justify="end" style="flex-wrap: nowrap;">
+      <v-col>
+      <Date ></Date>
+      </v-col>
     </v-row>
-    <v-row app style="flex-wrap: nowrap;" class="fill-height" no-gutters>
+    <v-row style="flex-wrap: wrap;" class="fill-height" no-gutters>
       <Menu v-on:item-selected="menuItemSelected"></Menu>
       <v-flex v-if="selectedMenuItem" class="flex-grow-0 flex-shrink-1">
         <SousMenu1 v-on:item-selected-sub="menuItemSelectedSub" :item="selectedMenuItem"></SousMenu1>
@@ -15,11 +17,11 @@
         <Map></Map>
       </v-flex>
     </v-row>
-    <div class="float-right">
-      <v-flex class="flex-grow-1 flex-shrink-0" no-gutters>
+        <v-footer
+      absolute
+    >
       <Message ></Message>
-    </v-flex>
-    </div>
+    </v-footer>
   </v-container>
 </template>
 
@@ -30,6 +32,7 @@ import SousMenu1 from "@/components/SousMenu1.vue";
 import SousMenu2 from "@/components/SousMenu2.vue";
 import Map from "@/components/Map.vue";
 import Message from "@/components/Message.vue";
+import Date from "@/components/Date.vue";
 
 export default {
   name: "home",
@@ -38,7 +41,8 @@ export default {
     SousMenu1,
     SousMenu2,
     Map,
-    Message
+    Message,
+    Date
   },
   data() {
     return {
