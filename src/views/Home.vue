@@ -8,7 +8,7 @@
         <Date></Date>
       </v-col>
     </v-row>
-    <v-row style="flex-wrap: wrap;" class="fill-height" no-gutters>
+    <v-row style="flex-wrap: nowrap;" class="fill-height" no-gutters>
       <Menu v-on:item-selected="menuItemSelected"></Menu>
       <v-flex v-if="selectedMenuItem" class="flex-grow-0 flex-shrink-1">
         <SousMenu1 v-on:item-selected-sub="menuItemSelectedSub" :item="selectedMenuItem"></SousMenu1>
@@ -20,8 +20,19 @@
         <Map></Map>
       </v-flex>
     </v-row>
-    <v-footer absolute>
+    <v-footer style="flex-wrap: nowrap;" absolute>
+    <v-col></v-col>
+    <v-col></v-col>
+    <v-col></v-col>
+    <v-col></v-col>
+    <v-col style="flex-wrap: nowrap;" class="fill-height" no-gutters>
+      <v-container class="text-right">
+      <TimeLine></TimeLine>
+      </v-container>
+    </v-col>
+    <v-col>
       <Message></Message>
+    </v-col>
     </v-footer>
   </v-container>
 </template>
@@ -34,6 +45,7 @@ import SousMenu2 from "@/components/SousMenu2.vue";
 import Map from "@/components/Map.vue";
 import Message from "@/components/Message.vue";
 import Date from "@/components/Date.vue";
+import TimeLine from "@/components/TimeLine.vue";
 
 export default {
   name: "home",
@@ -43,7 +55,8 @@ export default {
     SousMenu2,
     Map,
     Message,
-    Date
+    Date,
+    TimeLine
   },
   data() {
     return {

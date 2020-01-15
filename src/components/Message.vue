@@ -1,6 +1,6 @@
 <template>
-  <v-container>
-    <div class="text-center">
+  <v-container fluid>
+    <div class="text-right">
       <v-menu top :offset-y="offset">
         <template v-slot:activator="{ on }">
           <v-btn color="primary" dark v-on="on">Messages</v-btn>
