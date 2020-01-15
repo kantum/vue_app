@@ -20,19 +20,25 @@
         <Map></Map>
       </v-flex>
     </v-row>
-    <v-footer style="flex-wrap: nowrap;" absolute>
-    <v-col></v-col>
-    <v-col></v-col>
-    <v-col></v-col>
-    <v-col></v-col>
-    <v-col style="flex-wrap: nowrap;" class="fill-height" no-gutters>
-      <v-container class="text-right">
+    <v-footer style="justify-content: end; flex-wrap: nowrap;" absolute>
+      <v-spacer></v-spacer>
+      <v-spacer></v-spacer>
+      <v-spacer></v-spacer>
+      <v-spacer></v-spacer>
+      <v-spacer></v-spacer>
+      <v-spacer></v-spacer>
+      <v-spacer></v-spacer>
+      <v-spacer></v-spacer>
+      <v-spacer></v-spacer>
+      <v-spacer></v-spacer>
+      <v-spacer></v-spacer>
+      <v-spacer></v-spacer>
+      <v-spacer></v-spacer>
       <TimeLine></TimeLine>
-      </v-container>
-    </v-col>
-    <v-col>
+      <v-spacer></v-spacer>
       <Message></Message>
-    </v-col>
+      <v-spacer></v-spacer>
+      <Form></Form>
     </v-footer>
   </v-container>
 </template>
@@ -46,6 +52,7 @@ import Map from "@/components/Map.vue";
 import Message from "@/components/Message.vue";
 import Date from "@/components/Date.vue";
 import TimeLine from "@/components/TimeLine.vue";
+import Form from "@/components/Form.vue";
 
 export default {
   name: "home",
@@ -56,7 +63,8 @@ export default {
     Map,
     Message,
     Date,
-    TimeLine
+    TimeLine,
+    Form
   },
   data() {
     return {
