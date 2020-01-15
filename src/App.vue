@@ -32,7 +32,8 @@ export default {
     this.$vuetify.theme.themes.light.primary = '#9caf98'
 
     // Dark theme
-    this.$vuetify.theme.themes.dark.primary = '#4caf50'
+    this.$vuetify.theme.themes.dark.primary = '#765d47'
+    this.$vuetify.theme.themes.dark.primary = '#4c5540'
   },
 };
 </script>

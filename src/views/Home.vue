@@ -1,7 +1,11 @@
 <template >
   <v-container fluid fill-height class="ma-0 pa-0">
     <v-row justify="end" style="flex-wrap: nowrap;">
-      <v-col></v-col>
+      <v-col>
+        <div style="margin-left: 20px">
+        <v-img width="50px" aspect-ratio="1" :src="require('../assets/logo.svg')" />
+        </div>
+      </v-col>
       <v-col></v-col>
       <v-col></v-col>
       <v-col class="ma-0 pa-0">
@@ -20,24 +24,16 @@
         <Map></Map>
       </v-flex>
     </v-row>
-    <v-footer style="justify-content: end; flex-wrap: nowrap;" absolute>
-      <v-spacer></v-spacer>
-      <v-spacer></v-spacer>
-      <v-spacer></v-spacer>
-      <v-spacer></v-spacer>
-      <v-spacer></v-spacer>
-      <v-spacer></v-spacer>
-      <v-spacer></v-spacer>
-      <v-spacer></v-spacer>
-      <v-spacer></v-spacer>
-      <v-spacer></v-spacer>
-      <v-spacer></v-spacer>
-      <v-spacer></v-spacer>
-      <v-spacer></v-spacer>
+    <v-footer absolute>
+      <v-row class="ma-0 pa-0">
+      <v-switch color="primary" v-model="switch3"></v-switch>
+      </v-row>
+      <v-row class="ma-0 pa-0">
       <TimeLine></TimeLine>
-      <v-spacer></v-spacer>
+      </v-row>
+      <v-row class="ma-0 pa-0">
       <Message></Message>
-      <v-spacer></v-spacer>
+      </v-row>
       <Form></Form>
     </v-footer>
   </v-container>
@@ -70,7 +66,8 @@ export default {
     return {
       selectedMenuItem: null,
       selectedMenuItemSub: null,
-      selectedMenuItemSubDetail: null
+      selectedMenuItemSubDetail: null,
+      switch: false
     };
   },
   methods: {

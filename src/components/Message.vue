@@ -1,16 +1,47 @@
 <template>
-  <v-menu top :offset-y="offset">
+  <v-menu
+  fixed
+  bottom
+  close-on-click="false"
+  top :offset-y="offset"
+  >
     <template v-slot:activator="{ on }">
       <v-btn color="primary" dark v-on="on">J-chat</v-btn>
     </template>
-    <v-list>
-      <v-card>
-        <v-list-item v-for="(item, index) in messages" :key="index">
-          <v-list-item-title>{{ item.user }}</v-list-item-title>
-          <v-list-item-title>{{ item.text }}</v-list-item-title>
-        </v-list-item>
+      <v-card height="500px" class="mx-auto">
+        <v-list >
+          <v-list-item-group color="primary">
+            <v-list-item
+              v-for="(item, i) in messages"
+              :key="i"
+              :class="(item.sent ? 'text-right' : '')"
+            >
+              <v-chip pill v-if="item.sent">
+                {{ item.msg }}
+                <v-avatar right>
+                  <v-img src="https://cdn.vuetifyjs.com/images/john.png"></v-img>
+                </v-avatar>
+              </v-chip>
+              <v-chip pill v-else>
+                <v-avatar left>
+                  <v-img src="https://cdn.vuetifyjs.com/images/john.png"></v-img>
+                </v-avatar>
+                {{ item.msg }}
+              </v-chip>
+            </v-list-item>
+            <v-list-item>
+              <v-textarea j
+                append-outer-icon="send"
+                @click:append-outer="sendMessage"
+                v-model="messageNew.text"
+                class="mx-1"
+                label="Message to send"
+                rows="2"
+              ></v-textarea>
+            </v-list-item>
+          </v-list-item-group>
+        </v-list>
       </v-card>
-    </v-list>
   </v-menu>
 </template>
 
@@ -20,18 +51,63 @@ export default {
 
   data() {
     return {
-      messages: [
-        { user: "bob", text: "Salut Bob" },
-        { user: "John", text: "Salut John" }
+      items: [
+        {
+          active: true,
+          title: "Jason Oner",
+          avatar: "https://cdn.vuetifyjs.com/images/lists/1.jpg"
+        },
+        {
+          active: true,
+          title: "Ranee Carlson",
+          avatar: "https://cdn.vuetifyjs.com/images/lists/2.jpg"
+        },
+        {
+          title: "Cindy Baker",
+          avatar: "https://cdn.vuetifyjs.com/images/lists/3.jpg"
+        },
+        {
+          title: "Ali Connors",
+          avatar: "https://cdn.vuetifyjs.com/images/lists/4.jpg"
+        }
       ],
-      items: [{ title: "Message 1" }],
+      messageNew: {
+        text: null
+      },
+      messages: [
+        {
+          msg: "Real-Time",
+          avatar: "https://cdn.vuetifyjs.com/images/john.png",
+          sent: false
+        },
+        {
+          msg: "Audience",
+          avatar: "https://cdn.vuetifyjs.com/images/john.png",
+          sent: true
+        },
+        {
+          msg: "Conversions",
+          avatar: "https://cdn.vuetifyjs.com/images/john.png",
+          sent: false
+        },
+        {
+          msg: "reaas",
+          avatar: "https://cdn.vuetifyjs.com/images/john.png",
+          sent: false
+        }
+      ],
       offset: true,
       sheet: false
     };
   },
   methods: {
-    sendMessage(message) {
-      this.$emit("message", message);
+    sendMessage() {
+      this.messages.push({
+        msg: this.messageNew.text,
+        avatar: "https://cdn.vuetifyjs.com/images/john.png",
+        sent: true
+      });
+      this.messageNew.text = null;
     }
   }
 };
