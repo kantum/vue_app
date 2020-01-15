@@ -1,5 +1,5 @@
 <template>
-<v-container>
+  <v-container class="ma-0 pa-0">
     <v-menu
       ref="menu"
       v-model="menu"
@@ -10,30 +10,24 @@
       min-width="290px"
     >
       <template v-slot:activator="{ on }">
-        <v-text-field
-          v-model="date"
-          label="Date"
-          v-on="on"
-        ></v-text-field>
+        <v-text-field v-model="date" label="Date" v-on="on"></v-text-field>
       </template>
-      <v-date-picker
-      v-model="date" no-title scrollable>
+      <v-date-picker v-model="date" no-title scrollable>
         <v-btn text color="primary" @click="menu = false">Cancel</v-btn>
         <v-btn text color="primary" @click="$refs.menu.save(date)">OK</v-btn>
       </v-date-picker>
     </v-menu>
-</v-container>
+  </v-container>
 </template>
 
 <script>
 export default {
-
-  name: 'Date',
+  name: "Date",
   data() {
     return {
-        menu: false,
-        date: new Date().toISOString().substr(0, 10),
-  }
+      menu: false,
+      date: new Date().toISOString().substr(0, 10)
+    };
   }
 };
 </script>

@@ -1,36 +1,18 @@
 <template>
-<v-container>
-<div class="text-right">
-  <v-bottom-sheet
-  inset max-width="420px"
-  hide-overlay="1"
-  persistent
-  >
-    <template v-slot:activator="{ on }">
-      <v-btn
-        color="green"
-        v-on="on"
-      >
-messages
-      </v-btn>
-    </template>
-        <v-sheet class="text-right" height="200px">
-      <v-list>
-        <v-list-item v-for="message in messages" :key="message" link>
-          <v-list-item-title v-text=" message.text"></v-list-item-title>
-        </v-list-item>
-          <v-text-field
-            label="Votre message"
-            solo
-          ></v-text-field>
-        <v-btn>
-          Envoyer
-        </v-btn>
+  <v-container>
+    <div class="text-center">
+      <v-menu top :offset-y="offset">
+        <template v-slot:activator="{ on }">
+          <v-btn color="primary" dark v-on="on">Messages</v-btn>
+        </template>
+        <v-list>
+          <v-list-item v-for="(item, index) in items" :key="index">
+            <v-list-item-title>{{ item.title }}</v-list-item-title>
+          </v-list-item>
         </v-list>
-        </v-sheet>
-  </v-bottom-sheet>
-</div>
-</v-container>
+      </v-menu>
+    </div>
+  </v-container>
 </template>
 
 <script>
@@ -43,11 +25,9 @@ export default {
         { user: "bob", text: "Salut Bob" },
         { user: "John", text: "Salut John" }
       ],
-      items: [
-       { title: "Message 1" },
-      ],
+      items: [{ title: "Message 1" }],
       offset: true,
-      sheet: false,
+      sheet: false
     };
   },
   methods: {

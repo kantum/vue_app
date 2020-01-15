@@ -1,8 +1,11 @@
 <template >
   <v-container fluid fill-height class="ma-0 pa-0">
     <v-row justify="end" style="flex-wrap: nowrap;">
-      <v-col>
-      <Date ></Date>
+      <v-col></v-col>
+      <v-col></v-col>
+      <v-col></v-col>
+      <v-col class="ma-0 pa-0">
+        <Date></Date>
       </v-col>
     </v-row>
     <v-row style="flex-wrap: wrap;" class="fill-height" no-gutters>
@@ -17,10 +20,8 @@
         <Map></Map>
       </v-flex>
     </v-row>
-        <v-footer
-      absolute
-    >
-      <Message ></Message>
+    <v-footer absolute>
+      <Message></Message>
     </v-footer>
   </v-container>
 </template>
