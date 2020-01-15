@@ -1,5 +1,5 @@
 <template>
-  <v-navigation-drawer class="ma-0 pa-0" mini-variant>
+  <v-navigation-drawer class="ma-0 pa-0" mini-variant permanent>
       <v-list-item-group>
         <v-list class="ma-0 pa-0" nav>
           <v-list-item v-for="item in items" :key="item.title" @click="selectItem(item)">
