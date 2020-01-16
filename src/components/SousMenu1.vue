@@ -1,40 +1,39 @@
 <template>
   <v-container class="ma-0 pa-0">
-      <v-list-item-group>
-    <v-list-item>
-      <span>{{ item.title }}</span>
-    </v-list-item>
-    <v-list nav>
-      <v-list-item v-for="item in items" :key="item.title" @click="selectItemSub(item)">
-        <v-list-item-icon>
-          <v-icon>{{ item.icon }}</v-icon>
-        </v-list-item-icon>
-        <v-list-item-content>
-          <v-list-item-title>{{ item.title }}</v-list-item-title>
-        </v-list-item-content>
-      </v-list-item>
-    </v-list>
-    <div class="ma-2 pa-2">
-      <v-card flat min-height="600px" width="400">
-        <v-toolbar >
-          <v-app-bar-nav-icon></v-app-bar-nav-icon>
-          <v-toolbar-title>Title</v-toolbar-title>
-          <v-spacer></v-spacer>
-          <v-btn icon>
-            <v-icon>mdi-magnify</v-icon>
-          </v-btn>
-          <v-btn icon>
-            <v-icon>mdi-heart</v-icon>
-          </v-btn>
-          <v-btn icon>
-            <v-icon>mdi-dots-vertical</v-icon>
-          </v-btn>
-        </v-toolbar>
-        <v-textarea auto-grow outlined placeholder="Tapez du texte bordel !">
-          </v-textarea>
-      </v-card>
-    </div>
-    <!-- <v-alert
+    <v-list-item-group>
+      <!-- <v-list-item>
+        <span>{{ item.title }}</span>
+      </v-list-item>-->
+      <v-list nav>
+        <v-list-item v-for="item in items" :key="item.title" @click="selectItemSub(item)">
+          <v-list-item-icon>
+            <v-icon>{{ item.icon }}</v-icon>
+          </v-list-item-icon>
+          <v-list-item-content>
+            <v-list-item-title>{{ item.title }}</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
+      <div class="ma-2 pa-2">
+        <v-card flat min-height="600px" width="400">
+          <v-toolbar>
+            <v-app-bar-nav-icon></v-app-bar-nav-icon>
+            <v-toolbar-title>Editeur</v-toolbar-title>
+            <v-spacer></v-spacer>
+            <v-btn icon>
+              <v-icon>mdi-magnify</v-icon>
+            </v-btn>
+            <v-btn icon>
+              <v-icon>mdi-heart</v-icon>
+            </v-btn>
+            <v-btn icon>
+              <v-icon>mdi-dots-vertical</v-icon>
+            </v-btn>
+          </v-toolbar>
+          <v-textarea auto-grow outlined placeholder="Tapez votre texte ici"></v-textarea>
+        </v-card>
+      </div>
+      <!-- <v-alert
       max-width="400px"
       class="ma-1"
       border="left"
@@ -47,8 +46,8 @@
       {{ message.j }}
       <br />
       {{ message.text }}
-    </v-alert> -->
-      </v-list-item-group>
+      </v-alert>-->
+    </v-list-item-group>
   </v-container>
 </template>
 
@@ -64,11 +63,10 @@ export default {
         { title: "Infrastructure", icon: "mdi-home-city" },
         { title: "Médical", icon: "mdi-doctor" }
       ],
-            bars: [
-        { class: '' },
-        { class: '', dark: true },
-        { class: 'primary', dark: true },
-        { class: 'elevation-0' },
+      bars: [
+        { class: "", dark: true },
+        { class: "primary", dark: true },
+        { class: "elevation-0" }
       ],
       messages: [
         { j: "J3", text: "Ça va chier des bulles !" },

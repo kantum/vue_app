@@ -1,9 +1,9 @@
 <template>
   <v-container class="ma-0 pa-0">
-    <v-list-item>
+    <!-- <v-list-item>
       <span>{{ item.title }}</span>
-    </v-list-item>
-    <v-list nav>
+    </v-list-item>-->
+    <v-list dense nav>
       <v-list-item v-for="item in items" :key="item.title" link>
         <v-list-item-icon>
           <v-icon>{{ item.icon }}</v-icon>
@@ -23,10 +23,14 @@ export default {
   data() {
     return {
       items: [
-        { title: "Dashboard", icon: "mdi-view-dashboard" },
-        { title: "Photos", icon: "mdi-image" },
-        { title: "About", icon: "mdi-help-box" },
-        { title: "Test", icon: "mdi-help-box" }
+        { title: "Noir 11", icon: "mdi-view-dashboard" },
+        { title: "Noir 12", icon: "mdi-view-dashboard" },
+        { title: "Noir 13", icon: "mdi-view-dashboard" },
+        { title: "Noir 14", icon: "mdi-view-dashboard" },
+        { title: "Vert 11", icon: "mdi-view-dashboard" },
+        { title: "Vert 12", icon: "mdi-view-dashboard" },
+        { title: "Vert 13", icon: "mdi-view-dashboard" },
+        { title: "Vert 14", icon: "mdi-view-dashboard" }
       ],
       right: null
     };

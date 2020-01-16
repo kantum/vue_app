@@ -14,7 +14,8 @@ export default {
 
   data() {
     return {
-      right: null
+      right: null,
+      switch: true
     };
   }
 };

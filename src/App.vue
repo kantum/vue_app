@@ -5,12 +5,10 @@
 </template>
 
 <script>
-
 export default {
-  name: 'App',
+  name: "App",
 
-  components: {
-  },
+  components: {},
 
   data: () => ({
     j0: null,
@@ -23,17 +21,18 @@ export default {
     j7: null,
     j8: null,
     j9: null,
-    je: null,
+    je: null
   }),
 
-  created () {
-    this.$vuetify.theme.dark = true
+  created() {
+    this.$vuetify.theme.dark = true;
     // Light theme
-    this.$vuetify.theme.themes.light.primary = '#9caf98'
+    this.$vuetify.theme.themes.light.primary = "#9caf98";
+    this.$vuetify.theme.themes.light.primary = "#4c5540";
 
     // Dark theme
-    this.$vuetify.theme.themes.dark.primary = '#765d47'
-    this.$vuetify.theme.themes.dark.primary = '#4c5540'
-  },
+    this.$vuetify.theme.themes.dark.primary = "#765d47";
+    this.$vuetify.theme.themes.dark.primary = "#4c5540";
+  }
 };
 </script>

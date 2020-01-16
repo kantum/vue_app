@@ -3,7 +3,7 @@
     <v-row justify="end" style="flex-wrap: nowrap;">
       <v-col>
         <div style="margin-left: 20px">
-        <v-img width="50px" aspect-ratio="1" :src="require('../assets/logo.svg')" />
+          <v-img width="50px" aspect-ratio="1" :src="require('../assets/logo.svg')" />
         </div>
       </v-col>
       <v-col></v-col>
@@ -26,13 +26,13 @@
     </v-row>
     <v-footer absolute>
       <v-row class="ma-0 pa-0">
-      <v-switch color="primary" v-model="switch3"></v-switch>
+        <v-switch color="primary" v-model="switch3"></v-switch>
       </v-row>
       <v-row class="ma-0 pa-0">
-      <TimeLine></TimeLine>
+        <TimeLine></TimeLine>
       </v-row>
       <v-row class="ma-0 pa-0">
-      <Message></Message>
+        <Message></Message>
       </v-row>
       <Form></Form>
     </v-footer>

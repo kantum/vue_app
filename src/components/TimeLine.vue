@@ -4,9 +4,9 @@
       <v-btn color="primary" dark v-on="on">Timeline</v-btn>
     </template>
     <iframe
-      src="https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1_a7AZhNoGYk0Eks4pO8gaFntWGEO-4FMMkJQ_5CNSws&font=Default&lang=en&initial_zoom=2&height=400"
+      src="https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1CgwqeLR4dZP3KrllN5LhgEizl3nJ9-pXXeWM3bVjD6M&font=Default&lang=en&initial_zoom=2&height=350"
       width="100%"
-      height="400"
+      height="350"
       webkitallowfullscreen
       mozallowfullscreen
       allowfullscreen
