@@ -26,9 +26,9 @@
           </v-list-item>
           <v-list-item>
             <v-textarea
-              append-outer-icon="send"
               @click:append-outer="sendMessage"
-              v-model="messageNew.text"
+              style="justify: end"
+              append-outer-icon="send"
               class="mx-1"
               label="Message to send"
               rows="2"
@@ -71,24 +71,24 @@ export default {
       },
       messages: [
         {
-          msg: "Real-Time",
+          msg: "Bonjour René à tu vu le RETEX 9898",
           avatar:
-            "https://s1.lemde.fr/media/img/personalities/228cfe4_8695-jc8mfh.t0a8257b9.jpg",
+            "https://files.sympa-sympa.com/files/news/part_60/602760/3967060-image-crop-1517x1585-1544022651-728-1680c03dbb-1544666982.jpg",
           sent: false
         },
         {
-          msg: "Audience",
+          msg: "La situation à l'air de bien s'améliorer",
           avatar:
             "https://s1.lemde.fr/media/img/personalities/228cfe4_8695-jc8mfh.t0a8257b9.jpg",
           sent: true
         },
         {
-          msg: "Conversions",
+          msg: "👌",
           avatar: "https://cdn.vuetifyjs.com/images/john.png",
           sent: false
         },
         {
-          msg: "reaas",
+          msg: "Je vais manger des pates !",
           avatar: "https://cdn.vuetifyjs.com/images/john.png",
           sent: false
         }

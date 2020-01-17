@@ -1,5 +1,4 @@
 <template>
-  <v-row justify="right">
     <v-dialog v-model="dialog" fullscreen hide-overlay transition="dialog-bottom-transition">
       <template v-slot:activator="{ on }">
         <v-btn color="primary" dark v-on="on">Formulaire</v-btn>
@@ -20,9 +19,9 @@
             v-for="form in forms"
             :key="form.title"
             v-model="name"
-            :counter="10"
+            :counter="5"
             :rules="nameRules"
-            label="hello"
+            label="texte"
             required
           ></v-text-field>
 
@@ -43,15 +42,12 @@
             required
           ></v-checkbox>
 
-          <v-btn :disabled="!valid" color="success" class="mr-4" @click="validate">Validate</v-btn>
+          <v-btn :disabled="!valid" color="success" class="mr-4" @click="validate">Valider</v-btn>
 
-          <v-btn color="error" class="mr-4" @click="reset">Reset Form</v-btn>
-
-          <v-btn color="warning" @click="resetValidation">Reset Validation</v-btn>
+          <v-btn color="warning" @click="resetValidation">Annuler</v-btn>
         </v-form>
       </v-card>
     </v-dialog>
-  </v-row>
 </template>
 
 <script>

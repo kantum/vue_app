@@ -14,11 +14,9 @@
           </v-list-item-content>
         </v-list-item>
       </v-list>
-      <div class="ma-2 pa-2">
-        <v-card flat min-height="600px" width="400">
-          <v-toolbar>
+          <v-toolbar class="ma-0 pa-3" flat height="100%" width="400">
             <v-app-bar-nav-icon></v-app-bar-nav-icon>
-            <v-toolbar-title>Editeur</v-toolbar-title>
+            <v-toolbar-title>Éditeur</v-toolbar-title>
             <v-spacer></v-spacer>
             <v-btn icon>
               <v-icon>mdi-magnify</v-icon>
@@ -31,8 +29,6 @@
             </v-btn>
           </v-toolbar>
           <v-textarea auto-grow outlined placeholder="Tapez votre texte ici"></v-textarea>
-        </v-card>
-      </div>
       <!-- <v-alert
       max-width="400px"
       class="ma-1"

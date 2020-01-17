@@ -21,7 +21,8 @@ export default {
     j7: null,
     j8: null,
     j9: null,
-    je: null
+    je: null,
+    switch: null,
   }),
 
   created() {
@@ -36,3 +37,9 @@ export default {
   }
 };
 </script>
+
+<style>
+html {
+  overflow-y: hidden;
+}
+</style>
