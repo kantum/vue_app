@@ -1,7 +1,7 @@
 <template >
   <v-container fluid class="ma-0 pa-0">
     <v-app-bar-nav app>
-      <v-row justify="end" style="flex-wrap: nowrap;">
+      <v-row justify="end" style=" height: 74px; flex-wrap: nowrap;">
         <v-col>
           <div style="margin-left: 20px">
             <v-img width="50px" aspect-ratio="1" :src="require('../assets/logo.svg')" />
@@ -14,7 +14,7 @@
         </v-col>
       </v-row>
     </v-app-bar-nav>
-    <v-row style="flex-wrap: nowrap;" class="fill-height" no-gutters>
+    <v-row style="flex-wrap: nowrap; height: calc( 100vh - 74px - 74px) " no-gutters>
       <Menu v-on:item-selected="menuItemSelected"></Menu>
       <v-col v-if="selectedMenuItem" class="flex-grow-0 flex-shrink-1">
         <SousMenu1 v-on:item-selected-sub="menuItemSelectedSub" :item="selectedMenuItem"></SousMenu1>
@@ -26,11 +26,8 @@
         <Map></Map>
       </v-col>
     </v-row>
-    <v-row>
-      <div>etst</div>
-    </v-row>
-    <v-footer absolute>
-      <v-row class="ma-0 pa-0">
+    <v-footer style="height: 74px" absolute>
+      <v-row style="flex-wrap: nowrap;" class="ma-0 pa-0">
         <v-switch color="primary" v-model="switch3"></v-switch>
       </v-row>
       <v-row class="ma-0 pa-0">
